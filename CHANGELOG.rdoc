@@ -1,0 +1,5 @@
+= with_progress --- History
+
+== Version 1.0 - February 3rd, 2014
+
+=== Initial release.

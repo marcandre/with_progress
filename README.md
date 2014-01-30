@@ -1,6 +1,18 @@
-# WithProgress
+# with_progress [<img src="https://travis-ci.org/marcandre/with_progress.png?branch=master">](https://travis-ci.org/marcandre/with_progress) [<img src="https://badge.fury.io/rb/with_progress.png" alt="Gem Version" />](http://badge.fury.io/rb/with_progress)
 
-TODO: Write a gem description
+Brings the great [ruby-progressbar](https://github.com/jfelchner/ruby-progressbar) to `Enumerable`.
+
+## Usage
+
+This gem adds the method `Enumerable#with_progress`.
+
+Calling `with_progress` displays a progress bar while the iteration takes place.
+
+It uses the [ruby-progressbar](https://github.com/jfelchner/ruby-progressbar) gem and accepts the same options.
+
+In Ruby 2.0+, most enumerables return a size, so `with_progress` uses that to deduce the `total`, there's no need to specify it:
+
+	42.times.with_progress { do_something } # Will provide {total: 42} option in Ruby 2.0+ and show the right progression
 
 ## Installation
 
@@ -16,9 +28,6 @@ Or install it yourself as:
 
     $ gem install with_progress
 
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
