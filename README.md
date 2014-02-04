@@ -1,4 +1,4 @@
-# with_progress [<img src="https://travis-ci.org/marcandre/with_progress.png?branch=master">](https://travis-ci.org/marcandre/with_progress) [<img src="https://badge.fury.io/rb/with_progress.png" alt="Gem Version" />](http://badge.fury.io/rb/with_progress)
+# with_progress [![Build Status](https://travis-ci.org/marcandre/with_progress.png?branch=master)](https://travis-ci.org/marcandre/with_progress) [![Gem Version](https://badge.fury.io/rb/with_progress.png)](http://badge.fury.io/rb/with_progress)
 
 Brings the great [ruby-progressbar](https://github.com/jfelchner/ruby-progressbar) to `Enumerable`.
 
@@ -12,7 +12,9 @@ It uses the [ruby-progressbar](https://github.com/jfelchner/ruby-progressbar) ge
 
 In Ruby 2.0+, most enumerables return a size, so `with_progress` uses that to deduce the `total`, there's no need to specify it:
 
-	42.times.with_progress { do_something } # Will provide {total: 42} option in Ruby 2.0+ and show the right progression
+	42.times.with_progress { do_something }
+	# Will create the progress bar, provide the {total: 42} option
+	# (in Ruby 2.0+) and call increment after each do_something
 
 ## Installation
 
