@@ -16,6 +16,11 @@ In Ruby 2.0+, most enumerables return a size, so `with_progress` uses that to de
 	# Will create the progress bar, provide the {total: 42} option
 	# (in Ruby 2.0+) and call increment after each do_something
 
+For Ruby older than 2.0.0, some enumerators won't work, so progression will only show the elapsed time but won't be able to guess the remaining time. You can require some [backports](https://github.com/marcandre/backports) to improve the situation, for example:
+
+  require 'backports/2.0.0/range/size'
+  (10...42).with_progress { do_something } # will calculate the remaining time, even in old Rubies
+
 ## Installation
 
 Add this line to your application's Gemfile:

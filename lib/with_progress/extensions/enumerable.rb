@@ -4,7 +4,7 @@ module Enumerable
 
     options = WithProgress::DEFAULTS.merge(options)
     unless options.has_key?(:total)
-      options[:total] = size rescue self.end - self.begin + (exclude_end? ? 0 : 1) rescue nil
+      options[:total] = size rescue nil
     end
 
     bar = ProgressBar.create(options)

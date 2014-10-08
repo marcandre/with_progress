@@ -1,4 +1,5 @@
 require 'with_progress'
+require 'backports/2.0.0/range/size'
 
 describe "Progress" do
   it "looks good" do
